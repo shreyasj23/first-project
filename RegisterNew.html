@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>
+The Wall
+</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <script>
+function validateForm()
+{
+ var x=document.forms["form1"]["Fname"];
+ if (x.value=="")
+   {
+  alert("Please enter the First name.");
+  x.focus();
+  return false;
+   }
+ else if(x.value.length>20)
+   {
+   alert("First name cannot be greater than 20 characters.");
+  x.value="";
+  x.focus();
+  return false;
+   }
+   x=document.forms["form1"]["Lname"];
+ if(x.value=="")
+   {
+  alert("Please enter the Last name.");
+  x.focus();
+  return false;
+ }
+  else if(x.value.length>20)
+   {
+  alert("Last name cannot be greater than 20 characters.");
+  x.value="";
+  x.focus();
+  return false;
+ }
+   
+    if((document.form1.gender[0].checked==false)&&(document.form1.gender[1].checked==false))
+ {
+  document.form1.gender[0].focus();
+  alert("Please select a gender.");
+  return false;
+ }
+ x= document.getElementById("address");
+ if(x.value=="" )
+ {
+  alert("Please enter the Address.");
+  x.value="";
+  x.focus();
+  return false;
+ }
+ else if(x.value.length<20)
+   {
+  alert("Address should be greater than 20 characters.");
+  x.value="";
+  x.focus();
+  return false;
+ }
+  
+   
+   x=document.form1.contctno;
+ if(x.value=="")
+ {
+  alert("Please enter the Contact number.");
+  x.value="";
+  x.focus();
+  return false;
+ }
+ else if(isNaN(x.value))
+ {
+  alert("Contact number should contain only digits.");
+  x.value="";
+  x.focus();
+  return false;
+ }
+ else if(x.value.length!=10)
+ {
+  alert("Contact number should contain only 10 digits.(Mobile number)");
+  x.value="";
+  x.focus();
+  return false;
+ }
+if(confirm("Do you want to submit the form?"))
+
+{
+
+alert("Registration Form Submitted Successfully.");
+}
+ }
+	   
+</script>
+
+</head>
+<body>
+<div class="container">
+<div class="header"><center>
+<h1>The Wall Cricket Academay, Vishnupuri, Nanded-431606</h1>
+</div>
+<div class="contain">
+	<ul>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="RegisterNew.html">Register</a></li>
+	<li><a href="Fees.html">Fees Structure</a></li>
+	<li><a href="Gallery.html">Gallery</a></li>
+	<li><a href="Login.html">Login</a></li>
+	<li><a href="contactus.html">Contact us</a></li>
+	</ul>
+<div class="main">
+<form name="form1" method="post" action="Login.html">
+<h1>Registration Form</h1>
+<h3><table border="10" >
+<tr><td>First Name:</td><td><input type="text" name="Fname"></td></tr><br>
+<tr><td>Last Name:</td><td><input type="text" name="Lname"></td></tr>
+<tr><td>Password:</td><td><input type="password" name="pass"></td></tr>
+<tr><td>Address:</td><td><input type="text" name="address"></td></tr>
+<tr><td>Contact No:</td><td><input type="text" name="contactno"></td></tr>
+<tr><td>Gender:</td><td><input type="radio" name="gender" value="male">Male<br><input type="radio" name="gender" value="female">Female</td></tr>
+<tr><td>Hobbies:</td><td><input type="checkbox" value="programming">Cricket<br>
+<input type="checkbox" value="webdesigning">Football<br>
+<input type="checkbox" value="play">playing video games<br>
+<input type="checkbox" value="playd">Swimming<br>
+<input type="checkbox" value="playee">Basketball<br>
+</td></tr>
+<tr><td>Category:</td><td><Select name="year">
+<option name="fir" value="First year">Temporary Membership
+<option name="sec" value="Second year">Permanent Membership(up 12)
+<option name="thr" value="Third year">Permanent Membership(up 20)
+<option name="for" value="Final year">Use for Play other than member
+<option name="fiv" value="Finalll year">Use for otherwork
+</select>
+</td></tr>
+<tr><td></td><td><input type="submit" name="Reg" onclick="return validateForm()" value="Register Now."></td></tr>
+</table><br>
+<br><br>
+</form>
+<a href="Login.html">Login</a>
+</div>
+</div>
+<div class="footer">
+<p><a href="first.html">shreyasjadhav1723@gmail.com &copy copyright</a></p>
+</div>
+</div>
+</body>
+</html>
